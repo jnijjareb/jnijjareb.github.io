@@ -1,0 +1,88 @@
+<!doctype html>
+<head>
+    <title>CS663 Research Tutorial</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {},
+            },
+        };
+    </script>
+</head>
+<body class="dark:bg-slate-800">
+    <nav
+        class="text-2xl flex flex-row justify-evenly slate-300 dark:slate-500 text-black dark:text-white"
+    >
+        <a href="/"><div class="p-4">Abstract</div></a>
+        <a href="/introduction"><div class="p-4">Introduction</div></a>
+        <a href="/sensors"><div class="p-4">Sensors</div></a>
+        <a href="/models"><div class="p-4">Models</div></a>
+        <a href="/tradeoffs"><div class="p-4">Tradeoffs</div></a>
+        <a href="/challenges"><div class="p-4">Challenges</div></a>
+        <a href="/conclusions"><div class="p-4">Conclusions</div></a>
+    </nav>
+    <div class="p-8 w-full min-h-screen">
+        <h1 class="mb-4 text-4xl text-center font-semibold dark:text-white">
+            Challenges
+        </h1>
+        <p class="text-lg font-light w-1/2 mx-auto dark:text-white">
+            &emsp; Sticking with a monocular camera, the most significant
+            challenge is that of choosing the correct model. In general, a
+            monocular camera with a CNN will work for low-end systems. The model
+            could be upgraded if the cost is applicable to a Vision Transformer
+            if the device has the computing power available. For high-end
+            hardware, running a complex model and having a LiDAR sensor is the
+            ideal combination. Alternatively, a high-end model could be deployed
+            on the cloud and the mobile device could request from it. The main
+            challenge then would be handling the latency and requiring an
+            internet connection at all times. Generally speaking, there is also
+            the challenge of developing the software around the model itself.
+            With the example of individuals with differing visual impairments,
+            the challenge would be communicating depth information without
+            visuals.
+        </p>
+        <h1>Depth Maps</h1>
+        <div
+            class="mx-auto w-2/3 flex flex-row items-center justify-items-center font-light text-lg dark:text-white"
+        >
+            <div class="p-4 w-1/2">
+                <p class="my-auto">
+                    This is an example of a depth map. The darker pixels
+                    represent farther away parts of the image while the lighter
+                    pixels represent closeness. In this example, the depth
+                    values themselves are relative. In metric depth estimation,
+                    specific distance values are assigned to each pixel. In this
+                    example, the drink itself is nearby while the background,
+                    indicated by the darker colors, is farther away.
+                    Additionally, the cup in the background has a middling shade
+                    to represent it as further from the drink but closer than
+                    the background.
+                </p>
+            </div>
+            <div class="p-4 w-1/2">
+                <figure>
+                    <img
+                        class="p-2 max-w-1/2 w-3/4 h-auto rounded-xl bg-slate-400"
+                        src="https://i0.wp.com/education.civitai.com/wp-content/uploads/2023/10/depthmap-0000-1.png?resize=819%2C1024&ssl=1"
+                        alt="Grayscale Depth Map of a Drink"
+                    />
+                </figure>
+                <figcaption class="">
+                    <a
+                        class=""
+                        href="https://education.civitai.com/civitai-guide-to-depth"
+                        target="_blank"
+                    >
+                        <p
+                            class="mx-auto p-1 text-blue-800 dark:text-blue-200 font-semibold text-center"
+                        >
+                            Depth Map Image of a Drink
+                        </p>
+                    </a>
+                </figcaption>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,123 @@
+<!doctype html>
+<head>
+    <title>CS663 Research Tutorial</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {},
+            },
+        };
+    </script>
+</head>
+<body class="dark:bg-slate-800">
+    <nav
+        class="text-2xl flex flex-row justify-evenly slate-300 dark:slate-500 text-black dark:text-white"
+    >
+        <a href="/"><div class="p-4">Abstract</div></a>
+        <a href="/introduction"><div class="p-4">Introduction</div></a>
+        <a href="/sensors"><div class="p-4">Sensors</div></a>
+        <a href="/models"><div class="p-4">Models</div></a>
+        <a href="/tradeoffs"><div class="p-4">Tradeoffs</div></a>
+        <a href="/challenges"><div class="p-4">Challenges</div></a>
+        <a href="/conclusions"><div class="p-4">Conclusions</div></a>
+    </nav>
+    <div class="p-8 w-full min-h-screen">
+        <h1 class="mb-4 text-4xl text-center font-semibold dark:text-white">
+            Depth Estimation for Visually-Impaired Individuals
+        </h1>
+        <h2 class="p-2 text-3xl text-center dark:text-slate-200">Abstract</h2>
+        <p class="text-lg font-light w-1/2 mx-auto dark:text-white">
+            &emsp; Of the various challenges faced by vision-impaired
+            individuals, one particular problem is obtaining information to
+            emulate depth perception. In addition to having an understanding of
+            2-dimensional visual information presented, there exists a problem
+            of understanding depth and the 3-dimensional nature of surroundings.
+            Depth estimation models are capable of estimating how far objects
+            are from the viewer. Convolutional Neural Networks (CNNs), Vision
+            Transformers, and approaches derived from the two are some of the
+            modern deep learning model architectures for depth estimation.
+            Mobile devices are an ideal candidate for a widely available device
+            to provide depth estimation with its sensors. Several sensor types
+            have been tested for the task with tradeoffs on performance, cost,
+            convenience, and compatibility with mobile phones for the user. The
+            environment also significantly impacts the performance of the
+            various available options such as an indoor scene as opposed to an
+            outdoor one. Additionally, environmental lighting is a variable to
+            consider given that specific sensors can be advantageous in specific
+            lighting conditions. The project examines the different approaches
+            to depth estimation, their strengths and weaknesses, and the impact
+            on accessibility.
+        </p>
+        <div class="p-4 flex-col w-1/2 mx-auto">
+            <div class="m-2 p-2 bg-slate-200 rounded-xl">
+                <a
+                    class="text-2xl text-blue-600 font-semibold"
+                    href="introduction"
+                    >Introduction</a
+                >
+            </div>
+            <div class="m-2 p-2 bg-slate-200 rounded-xl">
+                <a class="text-2xl text-blue-600 font-semibold" href="sensors"
+                    >Sensors</a
+                >
+            </div>
+            <div class="m-2 p-2 bg-slate-200 rounded-xl">
+                <a class="text-2xl text-blue-600 font-semibold" href="models"
+                    >Depth Estimation Models</a
+                >
+            </div>
+            <div class="m-2 p-2 bg-slate-200 rounded-xl">
+                <a class="text-2xl text-blue-600 font-semibold" href="tradeoffs"
+                    >Effectiveness and Tradeoffs</a
+                >
+            </div>
+            <div class="m-2 p-2 bg-slate-200 rounded-xl">
+                <a
+                    class="text-2xl text-blue-600 font-semibold"
+                    href="challenges"
+                    >Challenges</a
+                >
+            </div>
+            <div class="m-2 p-2 bg-slate-200 rounded-xl">
+                <a
+                    class="text-2xl text-blue-600 font-semibold"
+                    href="conclusions"
+                    >Conclusions and Future</a
+                >
+            </div>
+        </div>
+        <div class="mx-auto flex-col w-1/2 font-light dark:text-white">
+            <p class="reference">
+                [1] F. Navarro, S. Cancino, and E. Estupinan, ‘Depth estimation
+                for visually impaired people using mobile devices’, in 2014 IEEE
+                5th Latin American Symposium on Circuits and Systems, Feb. 2014,
+                pp. 1–4. doi: 10.1109/LASCAS.2014.6820289.
+            </p>
+            <p class="reference">
+                [2] K. Park, S. Kim, and K. Sohn, ‘High-Precision Depth
+                Estimation Using Uncalibrated LiDAR and Stereo Fusion’, IEEE
+                Trans. Intell. Transp. Syst., vol. 21, no. 1, pp. 321–335, Jan.
+                2020, doi: 10.1109/TITS.2019.2891788.
+            </p>
+            <p class="reference">
+                [3] M. S. Junayed, A. Sadeghzadeh, M. B. Islam, L.-K. Wong, and
+                T. Aydin, ‘HiMODE: A Hybrid Monocular Omnidirectional Depth
+                Estimation Model’, Apr. 11, 2022, arXiv: arXiv:2204.05007.
+                Available: http://arxiv.org/abs/2204.05007
+            </p>
+            <p class="reference">
+                [4] L. Papa, P. Russo, and I. Amerini, ‘METER: a mobile vision
+                transformer architecture for monocular depth estimation’.
+                Available: https://arxiv.org/html/2403.08368v1
+            </p>
+            <p class="reference">
+                [5] A. Ganj, H. Su, and T. Guo, ‘HybridDepth: Robust Depth
+                Fusion for Mobile AR by Leveraging Depth from Focus and
+                Single-Image Priors’. Available:
+                https://arxiv.org/pdf/2407.18443v1
+            </p>
+        </div>
+    </div>
+</body>
