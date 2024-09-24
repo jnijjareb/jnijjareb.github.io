@@ -46,14 +46,21 @@
                     which will be the pixels of an image, the pipeline needs to
                     be built around that. The task therefore is to handle
                     calculating a depth map solely from the data of the visible
-                    objects in the image.
+                    objects in the image. With respect to the figure, the
+                    application needs to infer the right half of the image based
+                    off the left half of the image. Notably, monocular cameras
+                    do not provide any ground truth depth estimation as other
+                    sensors such as LiDAR might. The prediction needs to be made
+                    solely based off of the content of the image. Much like a
+                    human, the application must rely on visual cues such as
+                    shadows to estimate depth.
                 </p>
             </div>
             <div class="p-4 w-1/2">
                 <figure>
                     <img
                         class="p-2 max-w-1/2 w-3/4 h-auto rounded-xl bg-slate-400"
-                        src="https://i0.wp.com/education.civitai.com/wp-content/uploads/2023/10/depthmap-0000-1.png?resize=819%2C1024&ssl=1"
+                        src="/output.webp"
                         alt="Grayscale Depth Map of a Drink"
                     />
                 </figure>
@@ -66,7 +73,7 @@
                         <p
                             class="mx-auto p-1 text-blue-800 dark:text-blue-200 font-semibold text-center"
                         >
-                            Depth Map Image of a Drink
+                            Half Monocular Half Depth Map Image
                         </p>
                     </a>
                 </figcaption>

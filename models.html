@@ -48,40 +48,93 @@
         >
             <div class="p-4 w-1/2">
                 <p class="my-auto">
-                    This is an example of a depth map. The darker pixels
-                    represent farther away parts of the image while the lighter
-                    pixels represent closeness. In this example, the depth
-                    values themselves are relative. In metric depth estimation,
-                    specific distance values are assigned to each pixel. In this
-                    example, the drink itself is nearby while the background,
-                    indicated by the darker colors, is farther away.
-                    Additionally, the cup in the background has a middling shade
-                    to represent it as further from the drink but closer than
-                    the background.
+                    &emsp; Given how widely applicable CNNs are to vision tasks,
+                    CNNs are a great baseline to begin for depth estimation
+                    tasks. CNNs for image tasks rely on 2-dimensional
+                    convolutions to extract features from the image. While
+                    traditionally, particular filters such as those for edge
+                    detection or blur are used, CNNs use the Backpropagation
+                    Algorithm in order to learn the weights of the convolution
+                    kernel. The kernel is slid over the image, accumulating the
+                    pixel data covered by the kernel using a matrix dot product.
+                    The features are then flattened and passed into a standard
+                    feed-forward neural network.
                 </p>
             </div>
             <div class="p-4 w-1/2">
                 <figure>
                     <img
                         class="p-2 max-w-1/2 w-3/4 h-auto rounded-xl bg-slate-400"
-                        src="https://i0.wp.com/education.civitai.com/wp-content/uploads/2023/10/depthmap-0000-1.png?resize=819%2C1024&ssl=1"
-                        alt="Grayscale Depth Map of a Drink"
+                        src="https://mandroid6.github.io/images/Convolution_schematic.gif"
+                        alt="Visualization of Convolution"
                     />
                 </figure>
                 <figcaption class="">
                     <a
                         class=""
-                        href="https://education.civitai.com/civitai-guide-to-depth"
+                        href="https://mandroid6.github.io"
                         target="_blank"
                     >
                         <p
                             class="mx-auto p-1 text-blue-800 dark:text-blue-200 font-semibold text-center"
                         >
-                            Depth Map Image of a Drink
+                            Visualization of 2D Convolution with 3x3 Kernel
                         </p>
                     </a>
                 </figcaption>
             </div>
         </div>
+
+        <div
+            class="mx-auto w-2/3 flex flex-row items-center justify-items-center font-light text-lg dark:text-white"
+        >
+            <div class="p-4 w-1/2">
+                <figure>
+                    <img
+                        class="p-2 max-w-1/2 w-3/4 h-auto rounded-xl bg-slate-400"
+                        src="/transformer.png"
+                        alt="Transformer Architecture"
+                    />
+                </figure>
+                <figcaption class="">
+                    <a
+                        class=""
+                        href="https://arxiv.org/pdf/2204.05007v1"
+                        target="_blank"
+                    >
+                        <p
+                            class="mx-auto p-1 text-blue-800 dark:text-blue-200 font-semibold text-center"
+                        >
+                            Visualization of Transformer Architecture in HiMODE
+                        </p>
+                    </a>
+                </figcaption>
+            </div>
+            <div class="p-4 w-1/2">
+                <p class="my-auto">
+                    &emsp; On the other hand, Vision Transformers (ViT) are a
+                    promising alternative to CNNs. Utilizing the attention
+                    mechanism from the original Transformer architecture, ViTs
+                    compute attention between patches of an image to better
+                    correlate the relationships between different parts of an
+                    image. With such a message passing mechanism, depth
+                    estimation models can get a better sense fo the overall
+                    context as opposed.to only having local feature information
+                    as is the case with convolution kernels. Of course, given
+                    that we are expecting the application to run on mobile,
+                    computing requiremnts have to be considered, as CNNs tend to
+                    be more efficient.
+                </p>
+            </div>
+        </div>
+        <p class="text-lg font-light w-1/2 mx-auto dark:text-white">
+            &emsp; In addition to CNNs and ViTs, there are hybrid approaches
+            that combine the two. One particular example is HiMODE, an
+            omnidirectional monocular depth estimation model. While the sensor
+            is different due to being monocular, the concept for the model
+            architecure still applies. HiMODE models the Transformer
+            architecture but incorporates a convolution feature extractor and a
+            Spatial Residual Block (SRB) which includes convolutions.
+        </p>
     </div>
 </body>
