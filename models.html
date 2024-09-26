@@ -110,7 +110,7 @@
                 <figure>
                     <img
                         class="p-2 max-w-1/2 w-3/4 h-auto rounded-xl bg-slate-400"
-                        src="/transformer.png"
+                        src="assets/transformer.png"
                         alt="Transformer Architecture"
                     />
                 </figure>
@@ -149,10 +149,128 @@
             &emsp; In addition to CNNs and ViTs, there are hybrid approaches
             that combine the two. One particular example is HiMODE, an
             omnidirectional monocular depth estimation model. While the sensor
-            is different due to being monocular, the concept for the model
+            is different due to being omnidirectional, the concept for the model
             architecure still applies. HiMODE models the Transformer
             architecture but incorporates a convolution feature extractor and a
-            Spatial Residual Block (SRB) which includes convolutions.
+            Spatial Residual Block (SRB) which includes convolutions. The SRB
+            itself is comprised of 3 sub-blocks, the results of which are
+            concatenated to acquire the output of the entire block. The
+            subblocks include a convolution, a zero-padded average pool, and a
+            linear layer. The SRBs are placed between the encoder and decoder
+            portions of the whole architecture and after the decoder.
         </p>
+        <div class="mt-2 text-lg font-light w-1/2 mx-auto dark:text-white">
+            <figure>
+                <img
+                    class="p-2 w-full h-auto rounded-xl bg-slate-400"
+                    src="assets/himode.png"
+                    alt="HiMODE Architecture"
+                />
+            </figure>
+            <figcaption class="">
+                <a
+                    class=""
+                    href="https://arxiv.org/pdf/2204.05007v1"
+                    target="_blank"
+                >
+                    <p
+                        class="mx-auto p-1 text-blue-800 dark:text-blue-200 font-semibold text-center"
+                    >
+                        HiMODE Architecture
+                    </p>
+                </a>
+            </figcaption>
+        </div>
+        <p class="mt-2 text-lg font-light w-1/2 mx-auto dark:text-white">
+            &emsp; Though generally ViTs are preferred for heavier tasks, there
+            exists a particular Transformer-like hybrid architecture optimized
+            for mobile devices. METER is an encoder-decoder Transformer
+            architecture that includes both MobileNet convolutional blocks and a
+            few Transformer blocks, creating an overall lightweight model
+            architecture well-suited to mobile and embedded. METER also includes
+            its own characteristic blocks which are part of the model and has
+            skip connections from the encoder portion to recapture lost details
+            from the encoder component of the Transformer. The METER blocks
+            begin by passing the input into a convolutional block and a
+            transformer block, the output of which gets concatenated with the
+            original input again. That value is then passed into another
+            convolutional block. Notably, the input features of the METER block
+            are also the skip connections passed to the upsampling blocks that
+            occur later in the architecture. Overall, METER may provide
+            performance even better than that of traditional CNNs let alone ViTs
+            and is an excellent choice for depth estimation.
+        </p>
+
+        <div class="mt-2 text-lg font-light w-1/2 mx-auto dark:text-white">
+            <figure>
+                <img
+                    class="p-2 w-full h-auto rounded-xl bg-slate-400"
+                    src="https://arxiv.org/html/2403.08368v1/x2.png"
+                    alt="METER Architecture"
+                />
+            </figure>
+            <figcaption class="">
+                <a
+                    class=""
+                    href="https://arxiv.org/html/2403.08368v1"
+                    target="_blank"
+                >
+                    <p
+                        class="mx-auto p-1 text-blue-800 dark:text-blue-200 font-semibold text-center"
+                    >
+                        METER Architecture
+                    </p>
+                </a>
+            </figcaption>
+        </div>
+        <p class="mt-2 text-lg font-light w-1/2 mx-auto dark:text-white">
+            &emsp; Given there are several CNN, ViT, and hybrid options for
+            relative depth estimation, there also exist methods for metric depth
+            estimation. One particular example, HybridDepth, is an architecture
+            designed for mobile devices. It utilizes a technique known as Depth
+            From Focus (DFF) in conjunction with standard relative depth
+            estimation methods discussed prior. DFF is a basic method that
+            estimates depth from "estimates depth by identifying the focus
+            distance at which each pixel is most sharply defined" [hybriddepth
+            ref]. While the focus is on monocular depth estimation, HybridDepth
+            demonstrates that monocular cameras performing relative depth
+            estimation can serve as the foundation for more complex processes
+            such as metric depth estimation. In the HybridDepth architecture,
+            the Least-Squares Fitting method is used to combine the relative
+            depth map and the DFF results and calculate the scale and shift of
+            the relative depth map and generate a Globally Scaled Depth Map. A
+            larger scale would indicate a greater metric difference between the
+            least and greatest values in the depth map while the shift
+            identifies the metric depth of the least depth pixel. The Globally
+            Scaled Depth Map is then combined channel-wise with the results from
+            DFF to generate another scale map. Finally, the resulting scale map
+            is passed into the refinement layer, whose output is multiplied with
+            the original Globally Scaled Depth Map. The refinement layer itself
+            focuses on harnessing the DFF values to "apply scale refinement to
+            each pixel of the globally scaled depth map", resulting in superior
+            performance [hybriddepth ref].
+        </p>
+        <div class="mt-2 text-lg font-light w-1/2 mx-auto dark:text-white">
+            <figure>
+                <img
+                    class="p-2 w-full h-auto rounded-xl bg-slate-400"
+                    src="assets/hybriddepth.png"
+                    alt="HybridDepth Architecture"
+                />
+            </figure>
+            <figcaption class="">
+                <a
+                    class=""
+                    href="https://arxiv.org/pdf/2407.18443v1"
+                    target="_blank"
+                >
+                    <p
+                        class="mx-auto p-1 text-blue-800 dark:text-blue-200 font-semibold text-center"
+                    >
+                        HybridDepth Architecture
+                    </p>
+                </a>
+            </figcaption>
+        </div>
     </div>
 </body>
