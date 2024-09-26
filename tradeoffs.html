@@ -58,53 +58,57 @@
             constraints of working on an simple, accessible device would
             prohibit it.
         </p>
-        <h1>Depth Maps</h1>
-                            &emsp; The first tradeoff is that of quality over speed.
-                    With respect to models, more complex architectures and
-                    larger models can provide higher quality results at the cost
-                    of requiring more computational power. As capable mobile
-                    phones are, running a real-time depth estimation model is
-                    computationally expensive. Unlike desktop devices which may
-                    have a dedicated GPU that can parallelize convolutions and
-                    attention computation, mobile phones are far more limited
-                    and therefore model size is staunchly limited. Techniques
-                    such as quantization can help reduce the size and increase
-                    the speed of models at the cost of accuracy
-                </p>
-            </div>
-            <div class="mt-2 p-4 w-1/2">
-                <p class="my-auto">
-                    &emsp; Performance can also be considered with respect to
-                    the sensor. Depending on the quality of the camera being
-                    used, a depth estimation model may be provided more
-                    information as opposed to a lower quality camera. However,
-                    such higher quality cameras may be more expensive for the
-                    device.
-                </p>
-            </div>
-            <div class="mt-2 p-4 w-1/2">
-                <p class="my-auto">
-                    &emsp; In addition to the performance itself, cost is of
-                    paramount importance. If the cost constraints for the mob
-                    device are relaxed, the device itself can have more
-                    computational power, a better camera, and other features
-                    that allow it to support larger or more complex models. The
-                    acceptable cost would largely depend on the purpose of the
-                    software utilizing the depth estimation model. For example,
-                    for an accessibility app that notifies users of nearby
-                    objects they may collide into, the cost constraints are
-                    relatively strict as the software should be widely
-                    accessible. There may be other scenarios such as creating a
-                    depth map of a single scene where accessibility is not as
-                    essential.
-                </p>
-            </div>
+        <h2 class="p-2 text-3xl text-center dark:text-slate-200">
+            Quality and Speed
+        </h2>
+        <p class="text-lg font-light w-1/2 mx-auto dark:text-white">
+            &emsp; The first tradeoff is that of quality over speed. With
+            respect to models, more complex architectures and larger models can
+            provide higher quality results at the cost of requiring more
+            computational power. As capable mobile phones are, running a
+            real-time depth estimation model is computationally expensive.
+            Unlike desktop devices which may have a dedicated GPU that can
+            parallelize convolutions and attention computation, mobile phones
+            are far more limited and therefore model size is staunchly limited.
+            Techniques such as quantization can help reduce the size and
+            increase the speed of models at the cost of accuracy and
+            lower-quality inferences. METER seems to be an optimal tradeoff at
+            the intersection of quality with speed, as it is specifically
+            designed for mobile inference.
+        </p>
+    </div>
 
-            <div
-                class="mx-auto w-2/3 flex flex-row items-center justify-items-center font-light text-lg dark:text-white"
-            >
-            <div class="p-4 w-1/2">
-                            <p class="my-auto">
+    <div class="mt-2 p-4 w-1/2">
+        <p class="my-auto">
+            &emsp; Performance can also be considered with respect to the
+            sensor. Depending on the quality of the camera being used, a depth
+            estimation model may be provided more information as opposed to a
+            lower quality camera. However, such higher quality cameras may be
+            more expensive for the device.
+        </p>
+    </div>
+    <h2 class="p-2 text-3xl text-center dark:text-slate-200">Cost</h2>
+    <div class="mt-2 p-4 w-1/2">
+        <p class="my-auto">
+            &emsp; In addition to the performance itself, cost is of paramount
+            importance. If the cost constraints for the mobile device are
+            relaxed, the device itself can have more computational power, a
+            better camera, and other features that allow it to support larger or
+            more complex models. The acceptable cost would largely depend on the
+            purpose of the software utilizing the depth estimation model. For
+            example, for an accessibility app that notifies users of nearby
+            objects they may collide into, the cost constraints are relatively
+            strict as the software should be widely accessible. There may be
+            other scenarios such as creating a depth map of a single scene where
+            accessibility is not as essential, such as Augmented Reality.
+        </p>
+    </div>
+
+    <div
+        class="mx-auto w-2/3 flex flex-row items-center justify-items-center font-light text-lg dark:text-white"
+    >
+        <div class="p-4 w-1/2">
+            <p class="my-auto"></p>
             <div class="p-4 w-1/2">
                 <figure>
                     <img
