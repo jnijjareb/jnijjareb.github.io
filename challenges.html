@@ -64,6 +64,25 @@
         <h2 class="p-2 text-3xl text-center dark:text-slate-200">
             Application Development
         </h2>
+        <p class="text-lg font-light w-1/2 mx-auto dark:text-white">
+            &emsp; Another major challenge is developing an application around
+            depth estimation. An application for accessibility requires the
+            ability to communicate information acquired from depth sensing to
+            the user. Furthermore, building around a machine learning model,
+            which is computationally expensive, also requires preprocessing
+            sensor data for input, postprocessing model outputs, and acquiring
+            insights from the postprocessed outputs to communciate to the user,
+            all of which further increase the computational load on the device.
+            Additionally, since some applications may opt to use a client-server
+            architecture and run the model on a dedicated cloud server with far
+            more power than a mobile device, network issues and latency has to
+            be considered. If a user needs to venture into areas without a
+            strong internet connection as would be required for sending a live
+            feed of images, various network failure cases need to be considered
+            and factored into the user experience. From a development
+            standpoint, data sent over the network and server infrastructure are
+            more factors to optimize.
+        </p>
         <div class="mt-2 text-lg font-light w-1/2 mx-auto dark:text-white">
             <figure>
                 <img
@@ -80,10 +99,6 @@
             </figcaption>
         </div>
 
-        <p class="text-lg font-light w-1/2 mx-auto dark:text-white">
-            &emsp; Another major challenge is developing an application around
-            depth estimation.
-        </p>
         <h2 class="p-2 text-3xl text-center dark:text-slate-200">
             User Experience
         </h2>
@@ -120,5 +135,24 @@
                 </a>
             </figcaption>
         </div>
+        <h2 class="p-2 text-3xl text-center dark:text-slate-200">
+            Communication of Depth Information
+        </h2>
+        <p class="text-lg font-light w-1/2 mx-auto dark:text-white">
+            &emsp; Different visual impairments and use cases prompt different
+            methods of communicating the depth information. With the example of
+            frontal obstacle detection, an auditory cue could be one option. As
+            part of designing the application, utilizing such an audio interface
+            requires crafting an auditory signal to indicate danger. There is
+            also the challenge of how having an audio device would affect the
+            surrounding environment. Nearby people may find auditory indications
+            to be abrasive or an annoyance, not to mention how the user will
+            experience the signal repetitively. For individuals with low vision
+            or a lack of depth perception capabilities who could still view a
+            smartphone screen, visual information could be a better option. The
+            depth sensing feature could be used alongside a standard magnifier
+            as some accessibility applications already do to not only convey
+            their surroundings, but add depth perception to them as well.
+        </p>
     </div>
 </body>

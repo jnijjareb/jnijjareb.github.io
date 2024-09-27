@@ -45,7 +45,7 @@
         <h1 class="mb-4 text-4xl text-center font-semibold dark:text-white">
             Sensors
         </h1>
-        <p class="text-lg font-light w-1/2 mx-auto dark:text-white">
+        <p class="mt-2 text-lg font-light w-1/2 mx-auto dark:text-white">
             &emsp; Various sensor types are available for depth estimation. A
             simple monocular camera is the most basic and cost-effective option.
             Though stereo, LiDAR, and thermal cameras can be applicable in
@@ -54,30 +54,34 @@
             addition to being an accessible and portable device, mobile phones
             make an ideal candidate for various depth-reliant applications.
         </p>
-        <h2 class="p-2 text-3xl text-center dark:text-slate-200">
-            Monocular Cameras
+        <h2 class="my-2 p-2 text-3xl text-center dark:text-slate-200">
+            Smartphone Monocular Cameras
         </h2>
         <div
             class="mx-auto w-2/3 flex flex-row items-center justify-items-center font-light text-lg dark:text-white"
         >
             <div class="p-4 w-1/2">
                 <p class="my-auto">
-                    Given that we will rely on a monocular camera, the input of
-                    which will be the pixels of an image, the pipeline needs to
-                    be built around that. The task therefore is to handle
-                    calculating a depth map solely from the data of the visible
-                    objects in the image. With respect to the figure, the
-                    application needs to infer the right half of the image based
-                    off the left half of the image. Notably, monocular cameras
-                    do not provide any ground truth depth estimation as other
-                    sensors such as LiDAR might. The prediction needs to be made
-                    solely based off of the content of the image. Much like a
-                    human, the application must rely on visual cues such as
-                    shadows to estimate depth. Some mobile phone monocular
-                    cameras however, can capture images at different focal
-                    lengths. Certain approaches are able to combine this with
-                    the standard output of the monocular camera to achieve
-                    improved results.
+                    &emsp; Given that we will rely on a monocular camera, the
+                    input of which will be the pixels of an image, the pipeline
+                    needs to be built around that. The task therefore is to
+                    handle calculating a depth map solely from the data of the
+                    visible objects in the image. With respect to the figure,
+                    the application needs to infer the right half of the image
+                    based off the left half of the image. Notably, monocular
+                    cameras do not provide any ground truth depth estimation as
+                    other sensors such as LiDAR might. The prediction needs to
+                    be made solely based off of the content of the image. Much
+                    like a human may use context clues, the application must
+                    rely on visual cues such as shadows and lighting to infer
+                    depth. Certain mobile phone monocular cameras however, can
+                    capture images at different focal lengths. There exist
+                    approaches that are able to combine this with the standard
+                    output of the monocular camera to achieve improved results.
+                    As smartphone cameras tend to improve and acquire more
+                    features, it may be the case that in the future, new sensors
+                    become commonplace and as accessible as monocular smartphone
+                    cameras.
                 </p>
             </div>
             <div class="p-4 w-1/2">

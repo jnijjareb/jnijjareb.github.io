@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <head>
     <title>CS663 Research Tutorial</title>
     <link rel="stylesheet" href="index.css" />
@@ -50,49 +50,36 @@
             to improve the capabilities of a visually-impaired person beyond
             traditional technologies. Furthermore, as models and hardware
             advance, the quality of depth information and efficiency of running
-            inference will improve. Novel approaches build on top of the
-            original CNNs and Vision Transformers.
+            inference will improve. Novel approaches continue to build on top of
+            the original CNNs and Vision Transformers, incorporating new types
+            of sensors as well. Furthermore, as application development and user
+            experience research advances, there may be superior ways of
+            developing such applications and conveying depth information.
         </p>
-        <h1>Depth Maps</h1>
-        <div
-            class="mx-auto w-2/3 flex flex-row items-center justify-items-center font-light text-lg dark:text-white"
-        >
-            <div class="p-4 w-1/2">
-                <p class="my-auto">
-                    This is an example of a depth map. The darker pixels
-                    represent farther away parts of the image while the lighter
-                    pixels represent closeness. In this example, the depth
-                    values themselves are relative. In metric depth estimation,
-                    specific distance values are assigned to each pixel. In this
-                    example, the drink itself is nearby while the background,
-                    indicated by the darker colors, is farther away.
-                    Additionally, the cup in the background has a middling shade
-                    to represent it as further from the drink but closer than
-                    the background.
-                </p>
-            </div>
-            <div class="p-4 w-1/2">
-                <figure>
-                    <img
-                        class="p-2 max-w-1/2 w-3/4 h-auto rounded-xl bg-slate-400"
-                        src="https://i0.wp.com/education.civitai.com/wp-content/uploads/2023/10/depthmap-0000-1.png?resize=819%2C1024&ssl=1"
-                        alt="Grayscale Depth Map of a Drink"
-                    />
-                </figure>
-                <figcaption class="">
-                    <a
-                        class=""
-                        href="https://education.civitai.com/civitai-guide-to-depth"
-                        target="_blank"
-                    >
-                        <p
-                            class="mx-auto p-1 text-blue-800 dark:text-blue-200 font-semibold text-center"
-                        >
-                            Depth Map Image of a Drink
-                        </p>
-                    </a>
-                </figcaption>
-            </div>
-        </div>
+        <h2 class="p-2 text-3xl text-center dark:text-slate-200">
+            Device Hardware
+        </h2>
+        <p class="text-lg font-light w-1/2 mx-auto dark:text-white">
+            &emsp; As the hardware in mobile devices and servers improves and as
+            more specialized hardware is developed, the capabilities of depth
+            estimation models and applications will improve. While currently,
+            smartphones do not have massive parallel processing as graphics
+            chips do, future mobile devices might include more chips optimized
+            for running machine learning models. Furthermore, general
+            improvements in CPU, battery, networking, and memory would enable
+            developers to pursue more complex methods that can produce better
+            results. The manufacturing process for the hardware may also
+            improve, resulting in reduced costs for all of the components.
+        </p>
+        <h2 class="p-2 text-3xl text-center dark:text-slate-200">Sensors</h2>
+        <p class="text-lg font-light w-1/2 mx-auto dark:text-white">
+            &emsp; Though advanced sensors such as LiDAR are not as widely
+            available as monocular cameras on smartphones, new sensors could be
+            incorporated as mobile devices improve. It is possible that stereo
+            vision may become more commonplace and models could incorporate the
+            sensor into their input. Furthemore, as monocular cameras themselves
+            acquire more color detail and capture higher-definition images,
+            models may have more data to work with when inferring depth.
+        </p>
     </div>
 </body>
