@@ -155,16 +155,20 @@
         <p class="mt-2 text-lg font-light w-1/2 mx-auto dark:text-white">
             &emsp; In addition to CNNs and ViTs, there are hybrid approaches
             that combine the two. One particular example is HiMODE, an
-            omnidirectional monocular depth estimation model. While the sensor
-            is different due to being omnidirectional, the concept for the model
-            architecure still applies. HiMODE models the Transformer
-            architecture but incorporates a convolution feature extractor and a
-            Spatial Residual Block (SRB) which includes convolutions. The SRB
-            itself is comprised of 3 sub-blocks, the results of which are
-            concatenated to acquire the output of the entire block. The
-            subblocks include a convolution, a zero-padded average pool, and a
-            linear layer. The SRBs are placed between the encoder and decoder
-            portions of the whole architecture and after the decoder.
+            omnidirectional monocular depth estimation model [<a
+                class="text-blue-400"
+                href="introduction/#ref3"
+                >3</a
+            >]. While the sensor is different due to being omnidirectional, the
+            concept for the model architecure still applies. HiMODE models the
+            Transformer architecture but incorporates a convolution feature
+            extractor and a Spatial Residual Block (SRB) which includes
+            convolutions. The SRB itself is comprised of 3 sub-blocks, the
+            results of which are concatenated to acquire the output of the
+            entire block. The subblocks include a convolution, a zero-padded
+            average pool, and a linear layer. The SRBs are placed between the
+            encoder and decoder portions of the whole architecture and after the
+            decoder.
         </p>
 
         <div class="mt-2 text-lg font-light w-1/2 mx-auto dark:text-white">
@@ -196,18 +200,21 @@
             for mobile devices. METER is an encoder-decoder Transformer
             architecture that includes both MobileNet convolutional blocks and a
             few Transformer blocks, creating an overall lightweight model
-            architecture well-suited to mobile and embedded. METER also includes
-            its own characteristic blocks which are part of the model and has
-            skip connections from the encoder portion to recapture lost details
-            from the encoder component of the Transformer. The METER blocks
-            begin by passing the input into a convolutional block and a
-            transformer block, the output of which gets concatenated with the
-            original input again. That value is then passed into another
-            convolutional block. Notably, the input features of the METER block
-            are also the skip connections passed to the upsampling blocks that
-            occur later in the architecture. Overall, METER may provide
-            performance even better than that of traditional CNNs let alone ViTs
-            and is an excellent choice for depth estimation.
+            architecture well-suited to mobile and embedded devices [<a
+                class="text-blue-400"
+                href="introduction/#ref4"
+                >4</a
+            >]. METER also includes its own characteristic blocks which are part
+            of the model and has skip connections from the encoder portion to
+            recapture lost details from the encoder component of the
+            Transformer. The METER blocks begin by passing the input into a
+            convolutional block and a transformer block, the output of which
+            gets concatenated with the original input again. That value is then
+            passed into another convolutional block. Notably, the input features
+            of the METER block are also the skip connections passed to the
+            upsampling blocks that occur later in the architecture. Overall,
+            METER may provide performance even better than that of traditional
+            CNNs let alone ViTs and is an excellent choice for depth estimation.
         </p>
 
         <div class="mt-2 text-lg font-light w-1/2 mx-auto dark:text-white">
@@ -241,9 +248,9 @@
             estimation. One particular example, HybridDepth, is an architecture
             designed for mobile devices. It utilizes a technique known as Depth
             From Focus (DFF) in conjunction with standard relative depth
-            estimation methods discussed prior. DFF is a basic method that
-            estimates depth from "estimates depth by identifying the focus
-            distance at which each pixel is most sharply defined" [<a
+            estimation methods discussed prior. DFF is a traditional method that
+            "estimates depth by identifying the focus distance at which each
+            pixel is most sharply defined" [<a
                 class="text-blue-400"
                 href="introduction/#ref5"
                 >5</a
