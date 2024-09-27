@@ -1,7 +1,5 @@
 const canvas = document.getElementById("depth-map");
-console.log(canvas);
 const ctx = canvas.getContext("2d");
-console.log(ctx);
 const width = canvas.width;
 const height = canvas.height;
 
@@ -31,7 +29,7 @@ function getColor(value) {
 function applyGaussianBlur(array, rows, cols, kernelSize = 3, sigma = 1.0) {
     const kernel = generateGaussianKernel(kernelSize, sigma);
     const blurredArray = Array.from({ length: rows }, () =>
-        Array(cols).fill(0),
+        Array(cols).fill(0)
     );
     const offset = Math.floor(kernelSize / 2);
 
@@ -84,7 +82,7 @@ function drawDepthMap() {
 
     for (let i = 0; i < rows; i++) {
         for (let j = 0; j < cols; j++) {
-            const value = randomArray[i][j];
+            const value = blurred[i][j];
             ctx.fillStyle = getColor(value);
             ctx.fillRect(j * cellWidth, i * cellHeight, cellWidth, cellHeight); // Draw each cell
         }

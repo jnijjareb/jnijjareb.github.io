@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <head>
     <title>CS663 Research Tutorial</title>
     <link rel="stylesheet" href="index.css" />
@@ -61,46 +61,64 @@
             the challenge would be communicating depth information without
             visuals.
         </p>
-        <h1>Depth Maps</h1>
-        <div
-            class="mx-auto w-2/3 flex flex-row items-center justify-items-center font-light text-lg dark:text-white"
-        >
-            <div class="p-4 w-1/2">
-                <p class="my-auto">
-                    This is an example of a depth map. The darker pixels
-                    represent farther away parts of the image while the lighter
-                    pixels represent closeness. In this example, the depth
-                    values themselves are relative. In metric depth estimation,
-                    specific distance values are assigned to each pixel. In this
-                    example, the drink itself is nearby while the background,
-                    indicated by the darker colors, is farther away.
-                    Additionally, the cup in the background has a middling shade
-                    to represent it as further from the drink but closer than
-                    the background.
+        <h2 class="p-2 text-3xl text-center dark:text-slate-200">
+            Application Development
+        </h2>
+        <div class="mt-2 text-lg font-light w-1/2 mx-auto dark:text-white">
+            <figure>
+                <img
+                    class="p-2 max-w-1/2 w-3/4 h-auto rounded-xl bg-slate-400"
+                    src="assets/clouddiagram.png"
+                    alt="Diagram Comparing Local and Cloud Model Application Architectures"
+                />
+            </figure>
+            <figcaption class="">
+                <p class="mx-auto p-1 font-semibold text-center">
+                    Diagram Comparing Local and Cloud-Based Application
+                    Architectures
                 </p>
-            </div>
-            <div class="p-4 w-1/2">
-                <figure>
-                    <img
-                        class="p-2 max-w-1/2 w-3/4 h-auto rounded-xl bg-slate-400"
-                        src="https://i0.wp.com/education.civitai.com/wp-content/uploads/2023/10/depthmap-0000-1.png?resize=819%2C1024&ssl=1"
-                        alt="Grayscale Depth Map of a Drink"
-                    />
-                </figure>
-                <figcaption class="">
-                    <a
-                        class=""
-                        href="https://education.civitai.com/civitai-guide-to-depth"
-                        target="_blank"
-                    >
-                        <p
-                            class="mx-auto p-1 text-blue-800 dark:text-blue-200 font-semibold text-center"
-                        >
-                            Depth Map Image of a Drink
-                        </p>
-                    </a>
-                </figcaption>
-            </div>
+            </figcaption>
+        </div>
+
+        <p class="text-lg font-light w-1/2 mx-auto dark:text-white">
+            &emsp; Another major challenge is developing an application around
+            depth estimation.
+        </p>
+        <h2 class="p-2 text-3xl text-center dark:text-slate-200">
+            User Experience
+        </h2>
+        <p class="text-lg font-light w-1/2 mx-auto dark:text-white">
+            &emsp; Having a good user experience is yet another challenge to
+            tackle for creating a worthwhile application for various use cases
+            and especially accessibility. Another major factor in the quality of
+            the depth outputs is whether the sensor is extrinsically calibrated
+            for the application. For accessibility in particular, the entire
+            system needs to be designed in a way that accounts for visual
+            impairment. In the diagram depicted, the user is wearing the device,
+            removing the need to physically hold the camera to identify depth
+            and instead automatically detecting immediately in front of the
+            user, which is ideal for use cases like obstacle detection.
+            Additionally, while the diagram uses a stereo camera, the same
+            method applies to other sensors as well, including monocular
+            cameras.
+        </p>
+
+        <div class="mt-2 text-lg font-light w-1/2 mx-auto dark:text-white">
+            <figure>
+                <img
+                    class="p-2 max-w-1/2 w-3/4 h-auto rounded-xl bg-slate-400"
+                    src="assets/userdiagram.gif"
+                    alt="Diagram of a Visually-Impaired Person Utilizing the Application"
+                />
+            </figure>
+            <figcaption class="">
+                <a href="https://ieeexplore.ieee.org/document/6820289">
+                    <p class="mx-auto p-1 font-semibold text-center">
+                        Diagram of a Visually-Impaired Person Utilizing the
+                        Application
+                    </p>
+                </a>
+            </figcaption>
         </div>
     </div>
 </body>

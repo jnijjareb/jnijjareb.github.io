@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <head>
     <title>CS663 Research Tutorial</title>
     <link rel="stylesheet" href="index.css" />
@@ -76,20 +76,21 @@
             the intersection of quality with speed, as it is specifically
             designed for mobile inference.
         </p>
-    </div>
-
-    <div class="mt-2 p-4 w-1/2">
-        <p class="my-auto">
+        <h2 class="p-2 text-3xl text-center dark:text-slate-200">
+            Sensor Tradeoffs
+        </h2>
+        <p class="text-lg font-light w-1/2 mx-auto dark:text-white">
             &emsp; Performance can also be considered with respect to the
             sensor. Depending on the quality of the camera being used, a depth
             estimation model may be provided more information as opposed to a
             lower quality camera. However, such higher quality cameras may be
-            more expensive for the device.
+            more expensive for the device. If the types of sensors enable
+            enhancements over standard monocular depth estimation, as is the
+            case with HybridDepth, running it as opposed to METER could provide
+            better performance.
         </p>
-    </div>
-    <h2 class="p-2 text-3xl text-center dark:text-slate-200">Cost</h2>
-    <div class="mt-2 p-4 w-1/2">
-        <p class="my-auto">
+        <h2 class="p-2 text-3xl text-center dark:text-slate-200">Cost</h2>
+        <p class="text-lg font-light w-1/2 mx-auto dark:text-white">
             &emsp; In addition to the performance itself, cost is of paramount
             importance. If the cost constraints for the mobile device are
             relaxed, the device itself can have more computational power, a
@@ -102,35 +103,5 @@
             other scenarios such as creating a depth map of a single scene where
             accessibility is not as essential, such as Augmented Reality.
         </p>
-    </div>
-
-    <div
-        class="mx-auto w-2/3 flex flex-row items-center justify-items-center font-light text-lg dark:text-white"
-    >
-        <div class="p-4 w-1/2">
-            <p class="my-auto"></p>
-            <div class="p-4 w-1/2">
-                <figure>
-                    <img
-                        class="p-2 max-w-1/2 w-3/4 h-auto rounded-xl bg-slate-400"
-                        src="https://i0.wp.com/education.civitai.com/wp-content/uploads/2023/10/depthmap-0000-1.png?resize=819%2C1024&ssl=1"
-                        alt="Grayscale Depth Map of a Drink"
-                    />
-                </figure>
-                <figcaption class="">
-                    <a
-                        class=""
-                        href="https://education.civitai.com/civitai-guide-to-depth"
-                        target="_blank"
-                    >
-                        <p
-                            class="mx-auto p-1 text-blue-800 dark:text-blue-200 font-semibold text-center"
-                        >
-                            Depth Map Image of a Drink
-                        </p>
-                    </a>
-                </figcaption>
-            </div>
-        </div>
     </div>
 </body>
